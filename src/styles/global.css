@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --primary: 0 0% 7%;
+    --secondary: 0 0% 40%;
+    --gradientS: 216 94% 44%;
+    --gradientE: 328 92% 51%;
+  }
+}

@@ -3,27 +3,13 @@ import Layout from "../layouts/Layout.astro";
 import logo from "../assets/logo-w-text.svg";
 ---
 
-<Layout title="קשת פרויקטים | בבניה">
+<Layout
+  title="קשת פרויקטים | בבניה"
+  description="קשת בטיחות ופרויקטים מעניקה מגוון שירותי בטיחות בתנועה, משולבים בייעוץ והנדסת תנועה ע״י מהנדסי תנועה בעלי ניסיון וידע עשיר"
+>
   <main>
     <img src={logo} alt="logomark" />
-    <h2>האתר בבניה</h2>
+    <h2 class="text-fluid-2xl font-bold">האתר בבניה</h2>
     <p>לפרטים ניתן לפנות לאמיר בטלפון 054-9181500</p>
   </main>
 </Layout>
-
-<style>
-  main {
-    margin: auto;
-    padding: 1.5rem;
-    max-width: 37rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  img {
-    width: 70%;
-  }
-  h2 {
-    color: #1e75bb;
-  }
-</style>
