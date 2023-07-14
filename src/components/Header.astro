@@ -1,0 +1,14 @@
+---
+import logo from "../assets/logo-w-text.svg";
+import NavLinks from "./NavLinks.astro";
+---
+
+<header class="px-8 py-4">
+  <div class="max-w-6xl m-auto md:flex justify-between items-center">
+    <a href="/">
+      <img src={logo.src} alt="logomark" class="w-28" />
+    </a>
+
+    <NavLinks />
+  </div>
+</header>

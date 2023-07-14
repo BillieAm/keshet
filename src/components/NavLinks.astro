@@ -1,0 +1,7 @@
+---
+import { navLinks } from "../data";
+---
+
+<nav class="flex gap-16">
+  {navLinks.map(link => <a href={link.path}>{link.name}</a>)}
+</nav>
