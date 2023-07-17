@@ -1,6 +1,6 @@
 import { menu, toggle } from "../menuSignal";
 
-export default Hamburger = () => {
+export default function Hamburger() {
   return (
     <button
       aria-label={menu.value === "closed" ? "פתיחת תפריט" : "סגירת תפריט"}
@@ -14,4 +14,4 @@ export default Hamburger = () => {
       <span class="line bottom"></span>
     </button>
   );
-};
+}

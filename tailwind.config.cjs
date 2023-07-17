@@ -30,8 +30,15 @@ module.exports = {
         "fluid-6xl": ["clamp(2.57rem, calc(0.78rem + 8.95vw), 7.15rem)", "1"]
       },
       spacing: {
-        "fluid-1": "clamp(1.31rem, calc(0.65rem + 3.29vw), 3.00rem)",
-        "fluid-2": "clamp(1.31rem, calc(0.07rem + 6.22vw), 4.50rem)"
+        "fluid-sm": "clamp(1.00rem, calc(0.92rem + 0.39vw), 1.20rem)",
+        "fluid-base": "clamp(1.13rem, calc(0.98rem + 0.73vw), 1.50rem)",
+        "fluid-lg": "clamp(1.27rem, calc(1.03rem + 1.19vw), 1.88rem)",
+        "fluid-xl": "clamp(1.42rem, calc(1.06rem + 1.80vw), 2.34rem)",
+        "fluid-2xl": "clamp(1.60rem, calc(1.08rem + 2.59vw), 2.93rem)",
+        "fluid-3xl": "clamp(1.80rem, calc(1.08rem + 3.63vw), 3.66rem)",
+        "fluid-4xl": "clamp(2.03rem, calc(1.03rem + 4.98vw), 4.58rem)",
+        "fluid-5xl": "clamp(2.28rem, calc(0.94rem + 6.71vw), 5.72rem)",
+        "fluid-6xl": "clamp(2.57rem, calc(0.78rem + 8.95vw), 7.15rem)"
       }
     }
   },

@@ -1,14 +1,25 @@
 ---
 import logo from "../assets/logo-w-text.svg";
-import NavLinks from "./NavLinks.astro";
+import Hamburger from "./Hamburger";
+import NavMobile from "./NavMobile";
+
+import { navLinks } from "../data";
 ---
 
-<header class="px-8 py-4">
-  <div class="max-w-6xl m-auto md:flex justify-between items-center">
+<header class="px-fluid-base py-1">
+  <div class="max-w-6xl m-auto flex justify-between items-center">
     <a href="/">
-      <img src={logo.src} alt="logomark" class="w-28" />
+      <img src={logo.src} alt="logomark" class="w-32" />
     </a>
 
-    <NavLinks />
+    <!-- mobile menu -->
+    <Hamburger client:idle />
+    <NavMobile client:idle>
+      {navLinks.map(link => <a href={link.path}>{link.name}</a>)}
+    </NavMobile>
+
+    <nav class="hidden lg:flex gap-fluid-4xl">
+      {navLinks.map(link => <a href={link.path}>{link.name}</a>)}
+    </nav>
   </div>
 </header>
