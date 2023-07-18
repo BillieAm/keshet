@@ -1,4 +1,6 @@
 ---
+import angle from "../assets/angle.svg";
+
 interface Props {
   heading: string;
   id: string;
@@ -7,6 +9,14 @@ interface Props {
 const { heading, id } = Astro.props;
 ---
 
-<section id={id}>
-  <div></div>
+<section id={id} class="flex flex-col justify-center items-center">
+  <h2
+    class="text-fluid-lg font-bold bg-gradient-to-l from-gradientS to-gradientE text-transparent bg-clip-text"
+  >
+    {heading}
+  </h2>
+  <div class="relative p-fluid-xl">
+    <img src={angle.src} alt="" class="absolute -z-10 right-0 bottom-0" />
+    <slot />
+  </div>
 </section>
