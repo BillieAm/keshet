@@ -12,6 +12,16 @@
   }
 }
 
+@layer base {
+  html {
+    @apply scroll-pt-fluid-xl md:scroll-pt-fluid-2xl;
+  }
+
+  body {
+    @apply bg-background text-secondary text-fluid-sm tracking-wider;
+  }
+}
+
 /* hamburger/close icon animation */
 .line {
   @apply w-full h-1 bg-slate-600 rounded-lg transition;
