@@ -14,7 +14,7 @@
 
 @layer base {
   html {
-    @apply scroll-pt-fluid-xl md:scroll-pt-fluid-2xl;
+    @apply scroll-pt-16 lg:scroll-pt-8;
   }
 
   body {
