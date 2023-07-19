@@ -2,12 +2,34 @@
 import logoHero from "../assets/keset-logo.svg";
 import logoText from "../assets/logo-text1.svg";
 import bg from "../assets/hero-background.jpg";
+
+import { Icon } from "astro-icon";
 ---
 
-<section class="min-h-screen bg-cover bg-right lg:bg-center">
+<section
+  class="min-h-screen flex flex-col gap-14 justify-center items-center bg-cover bg-right lg:bg-center"
+>
   <h1 class="flex">
     <img src={logoText.src} alt="קשת בטיחות ופרויקטים" />
   </h1>
+  <p class="max-w-2xl text-center">
+    קשת בטיחות ופרויקטים מעניקה מגוון שירותי בטיחות בתנועה, משולבים בייעוץ
+    והנדסת תנועה ע״י מהנדסי תנועה בעלי ניסיון וידע עשיר
+  </p>
+  <div class="flex flex-col md:flex-row gap-6">
+    <a
+      href="tel:054-9181500"
+      class="flex gap-1 text-white bg-primary p-5 py-2 rounded-md hover:opacity-80"
+    >
+      לשיחת ייעוץ
+      <Icon name="ph:phone-call" class="w-6" />
+    </a>
+    <a
+      href="#שירותים"
+      class="bg-white text-center p-5 py-2 rounded-md border-2 border-gradientE hover:border-gradientS"
+      >לפרטים</a
+    >
+  </div>
 </section>
 
 <style>

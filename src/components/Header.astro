@@ -19,8 +19,16 @@ import { navLinks } from "../data";
     </NavMobile>
 
     <nav class="hidden lg:flex items-center gap-fluid-4xl">
-      {navLinks.map(link => <a href={link.path}>{link.name}</a>)}
-      <a href="#צרו-קשר" class="text-white bg-black px-6 py-2 rounded"
+      {
+        navLinks.map(link => (
+          <a href={link.path} class="hover:text-primary">
+            {link.name}
+          </a>
+        ))
+      }
+      <a
+        href="#צרו-קשר"
+        class="text-white bg-black px-6 py-2 rounded hover:opacity-80"
         >צרו קשר</a
       >
     </nav>
