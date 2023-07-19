@@ -1,48 +1,72 @@
 ---
 import SectionLayout from "../layouts/SectionLayout.astro";
 
+import { Image } from "astro:assets";
+
+import parkingLot from "../assets/parking-lot.jpg";
+import dotsAngle from "../assets/dots-angle.svg";
+
 /* import { getCollection, getEntry } from "astro:content";
 const entry = await getEntry("sections", "services");
 const { Content } = await entry.render();
 const servicesEntries = await getCollection("services"); */
 ---
 
-<SectionLayout heading="המוצרים והשירותים שלנו" id="שירותים">
-  <div class="relativ flex flex-col gap-fluid-sm">
-    <h3 class="font-bold text-primary">מושבים / קיבוצים / ועדים מקומיים</h3>
-    <ul class="list-disc mr-5">
-      <li>עדכון תוכנית תנועה להוספת פסי האטה, מעברי חציה תמרורים וכיוצ"ב</li>
-      <li>הכנה או עדכון של תוכנית תמרור ותנועה</li>
-      <li>יעוץ / הנדסת תנועה לפי צרכי הלקוח</li>
-      <li>
-        הכנה ותכנון של אזורי Safety Zone - בטיחות מוגברת לגני ילדים, מגרשי
-        משחקים ואזורי הדורשים בטיחות מוגברת
-      </li>
-      <li>עדכון תוכנית לחניות נכים לפי דרישות נגישות</li>
-    </ul>
-    <h3 class="font-bold text-primary">
-      חניונים תת קרקעיים בועדי בתים / מרכזים מסחריים / בנייני משרדים
-    </h3>
-    <ul class="list-disc mr-5">
-      <li>יעוץ ותכנון להגברת בטיחות בתנועה בחניון</li>
-      <li>
-        עדכון תוכנית תנועה להוספת מראות פנורמיות ,פסי האטה, מעברי חציה תמרורים
-        וכיוצ"ב .
-      </li>
-      <li>הכנה ותכנון של אזורי Safety Zone - אזורי מעליות ולובי</li>
-    </ul>
-    <h3 class="font-bold text-primary">
-      שטחים תפעוליים, מפעלים ומחסנים לוגיסטיים
-    </h3>
-    <ul class="list-disc mr-5">
-      <li>הכנה ותכנון של שבילי הליכה בטוחים</li>
-      <li>נתיבי נסיעה למלגזות והפרדה מהולכי רגל</li>
-      <li>מיגונים לפנים וחוץ המפעל / המחסן</li>
-      <li>
-        עדכון תוכנית תנועה להוספת מראות פנורמיות ,פסי האטה, מעברי חציה תמרורים
-        וכיוצ"ב .
-      </li>
-      <li>הקמת "אזור רכב תפעולי"</li>
-    </ul>
+<div>
+  <SectionLayout heading="המוצרים והשירותים שלנו" id="שירותים">
+    <div class="flex flex-col gap-fluid-sm">
+      <h3 class="font-bold text-primary">מושבים / קיבוצים / ועדים מקומיים</h3>
+      <ul class="list-disc mr-5">
+        <li>עדכון תוכנית תנועה להוספת פסי האטה, מעברי חציה תמרורים וכיוצ"ב</li>
+        <li>הכנה או עדכון של תוכנית תמרור ותנועה</li>
+        <li>יעוץ / הנדסת תנועה לפי צרכי הלקוח</li>
+        <li>
+          הכנה ותכנון של אזורי Safety Zone - בטיחות מוגברת לגני ילדים, מגרשי
+          משחקים ואזורי הדורשים בטיחות מוגברת
+        </li>
+        <li>עדכון תוכנית לחניות נכים לפי דרישות נגישות</li>
+      </ul>
+      <h3 class="font-bold text-primary">
+        חניונים תת קרקעיים בועדי בתים / מרכזים מסחריים / בנייני משרדים
+      </h3>
+      <ul class="list-disc mr-5">
+        <li>יעוץ ותכנון להגברת בטיחות בתנועה בחניון</li>
+        <li>
+          עדכון תוכנית תנועה להוספת מראות פנורמיות ,פסי האטה, מעברי חציה תמרורים
+          וכיוצ"ב .
+        </li>
+        <li>הכנה ותכנון של אזורי Safety Zone - אזורי מעליות ולובי</li>
+      </ul>
+      <h3 class="font-bold text-primary">
+        שטחים תפעוליים, מפעלים ומחסנים לוגיסטיים
+      </h3>
+      <ul class="list-disc mr-5">
+        <li>הכנה ותכנון של שבילי הליכה בטוחים</li>
+        <li>נתיבי נסיעה למלגזות והפרדה מהולכי רגל</li>
+        <li>מיגונים לפנים וחוץ המפעל / המחסן</li>
+        <li>
+          עדכון תוכנית תנועה להוספת מראות פנורמיות ,פסי האטה, מעברי חציה תמרורים
+          וכיוצ"ב .
+        </li>
+        <li>הקמת "אזור רכב תפעולי"</li>
+      </ul>
+    </div>
+  </SectionLayout>
+
+  <!-- image -->
+  <div class="flex justify-center">
+    <div class="relative">
+      <img
+        src={dotsAngle.src}
+        alt=""
+        aria-hidden="true"
+        class="hidden lg:block absolute -bottom-14 -left-20"
+      />
+      <Image
+        src={parkingLot}
+        alt="חנייית בניין מקורה"
+        class="relative w-full max-w-2xl"
+      />
+    </div>
   </div>
-</SectionLayout>
+</div>

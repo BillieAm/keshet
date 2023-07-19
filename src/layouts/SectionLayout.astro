@@ -4,14 +4,18 @@ import angle from "../assets/angle.svg";
 interface Props {
   heading: string;
   id: string;
+  classes?: string;
 }
 
-const { heading, id } = Astro.props;
+const { heading, id, classes } = Astro.props;
 ---
 
 <section
   id={id}
-  class="px-fluid-sm py-fluid-4xl flex flex-col justify-center items-center"
+  class:list={[
+    "px-fluid-sm py-fluid-4xl flex flex-col justify-center items-center",
+    classes
+  ]}
 >
   <h2
     class="text-fluid-lg font-bold bg-gradient-to-l from-gradientS to-gradientE text-transparent bg-clip-text"
@@ -25,6 +29,6 @@ const { heading, id } = Astro.props;
       aria-hidden="true"
       class="absolute -z-10 right-0 bottom-0"
     />
-    <slot />
+    <slot class="relative" />
   </div>
 </section>
