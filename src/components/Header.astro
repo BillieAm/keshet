@@ -6,7 +6,7 @@ import NavMobile from "./NavMobile";
 import { navLinks } from "../data";
 ---
 
-<header class="px-fluid-base">
+<header class="fixed w-full bg-background px-fluid-base shadow-md z-20">
   <div class="max-w-6xl m-auto flex justify-between items-center">
     <a href="/">
       <img src={logo.src} alt="logomark" class="w-32" />
@@ -18,8 +18,11 @@ import { navLinks } from "../data";
       {navLinks.map(link => <a href={link.path}>{link.name}</a>)}
     </NavMobile>
 
-    <nav class="hidden lg:flex gap-fluid-4xl">
+    <nav class="hidden lg:flex items-center gap-fluid-4xl">
       {navLinks.map(link => <a href={link.path}>{link.name}</a>)}
+      <a href="#צרו-קשר" class="text-white bg-black px-6 py-2 rounded"
+        >צרו קשר</a
+      >
     </nav>
   </div>
 </header>

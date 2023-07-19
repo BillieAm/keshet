@@ -14,9 +14,5 @@ export const navLinks: { name: string; path: string }[] = [
   {
     name: "קצת עליי",
     path: "#קצת-עליי"
-  },
-  {
-    name: "צרו קשר",
-    path: "#צרו-קשר"
   }
 ];
